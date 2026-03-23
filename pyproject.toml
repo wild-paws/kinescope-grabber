@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kinescope-grabber"
+version = "1.0.0"
+description = "Kinescope video downloader with SAMPLE-AES decryption, multithreaded download, and batch mode"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Wild Paws", url = "https://github.com/wild-paws"},
+]
+keywords = ["kinescope", "video", "downloader", "hls", "drm", "sample-aes"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Multimedia :: Video",
+]
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/wild-paws/kinescope-grabber"
+Repository = "https://github.com/wild-paws/kinescope-grabber"
+Issues = "https://github.com/wild-paws/kinescope-grabber/issues"
+
+[project.scripts]
+kgrab = "kinescope_grabber.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["kinescope_grabber*"]

@@ -39,6 +39,23 @@
 
 ## 🚀 Установка
 
+### Быстрая установка через pip
+
+```bash
+pip install git+https://github.com/wild-paws/kinescope-grabber.git
+```
+
+После этого доступна команда `kgrab`:
+
+```bash
+kgrab video.json --best
+kgrab ./jsons/ --best -w 16
+```
+
+> ⚠️ **Внешние зависимости** (ffmpeg и mp4decrypt) всё равно нужно установить отдельно — см. инструкции ниже для вашей ОС.
+
+---
+
 ### macOS
 
 ```bash
@@ -122,27 +139,17 @@ pip3 install -r requirements.txt
 ### Шаг 2: Скачивание
 
 ```bash
-# Одно видео (лучшее качество)
+# Если установлен через pip:
+kgrab video.json --best
+kgrab ./json_folder/ --best
+kgrab video.json -q 720 -o ./videos/
+kgrab video.json --best -w 16
+kgrab video.json --info
+
+# Если скачан через git clone:
 python3 grabber.py video.json --best
 
-# Одно видео (конкретное качество)
-python3 grabber.py video.json -q 720
-
-# Все видео из папки
-python3 grabber.py ./json_folder/ --best
-
-# С указанием выходной папки
-python3 grabber.py ./json_folder/ --best -o ./videos/
-
-# Больше потоков (быстрый интернет)
-python3 grabber.py video.json --best -w 16
-
-# Только информация (без скачивания)
-python3 grabber.py video.json --info
-```
-
-Альтернативный запуск как Python-модуль:
-```bash
+# Как Python-модуль:
 python3 -m kinescope_grabber video.json --best
 ```
 
