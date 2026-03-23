@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/user-attachments/assets/e3e9330b-4d73-4bb7-8def-0ae835ff8a59">
-    <img src="https://i.ibb.co/ycM80Kx1/x.png" width="700"/>
+    <img src="https://i.ibb.co/JFKL16Fj/pic.jpg" width="700"/>
   </a>
   <br/>
   <b>▶️ Watch Demo Video</b>
